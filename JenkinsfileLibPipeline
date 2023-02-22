@@ -1,0 +1,5 @@
+@Library('shared-libraries') _
+buildPushPipeline(
+    filePath: "filepath",
+    dockerImage: "some docker image"
+)
