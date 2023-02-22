@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 script{
-                    functions.build(filePath: "filepath"
+                    functions.build(filePath: "filepath",
                                     dockerImage: "some docker image"
                     )
                 }
