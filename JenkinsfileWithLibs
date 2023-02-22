@@ -1,0 +1,22 @@
+@Library('shared-libraries')
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                script{
+                    functions.build(filePath: "filepath"
+                                    DockerImage: "some docker image"
+                    )
+                }
+            }
+        }
+        stage('docker push') {
+            steps {
+                script{
+                    functions.push(DockerImage: "some docker image")
+                }
+            }
+        }
+    }
+}
